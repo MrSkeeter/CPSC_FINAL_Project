@@ -1,10 +1,11 @@
 # CPSC_FINAL_Project
-1 What’s in this repo?
+
+# 1 What’s in this repo?
 
 roulette_duel.py      ← the entire game: rules, AI, and CLI
 That one script contains all logic and user interaction. No extra packages are required—just Python 3.8+.
 
-2 How the code is organised inside roulette_duel.py
+# 2 How the code is organised inside roulette_duel.py
 Line range    Section	Key classes / functions	What it does
 1 – 110	      Config + Gun	USE_MC, MC_SAMPLES, class Gun	Toggles Monte-Carlo search; handgun model with fire(), eject(), clone(), and reload().
 120 – 210	    Player + Items	class Player, use_item()	Base player, life tracking, item effects (cigarettes, crystal, sand, whiskey).
@@ -15,7 +16,7 @@ Line range    Section	Key classes / functions	What it does
 465 – 565	    Game loop	class Game	Coin-flip for first move, turn handling, auto-reload, win detection.
 569 – end	    Entrypoint	if __name__ == \"__main__\":	Seeds RNG and starts Game().play().
 
-3 Running the game
+# 3 Running the game
 python roulette_duel.py
 Call heads/tails in the prompt.
 
@@ -25,7 +26,7 @@ The AI responds instantly.
 
 First to hit zero lives loses.
 
-4 Key algorithms
+# 4 Key algorithms
 Monte-Carlo sampling – 20 random cylinder permutations per turn (Gun.clone()).
 
 Depth-1 expectiminimax – evaluates
@@ -36,14 +37,14 @@ Utility = AI lives − Human lives; picks max average.
 
 Set USE_MC = False near the top if you want the original static-rule AI.
 
-5 Modifying / Extending
+# 5 Modifying / Extending
 Change item behaviour – edit Player.use_item().
 
 Add a GUI – import Game, call game.play_turn(action) from buttons.
 
 Increase AI foresight – raise MC_SAMPLES or add a second ply inside mc_decide().
 
-6 Requirements
+# 6 Requirements
 Python 3.8 or newer
 
 No external libraries needed (standard random, dataclasses only).
