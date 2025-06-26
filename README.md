@@ -1,10 +1,10 @@
 # CPSC_FINAL_Project
-1 · What’s in this repo?
+1 What’s in this repo?
 
 roulette_duel.py      ← the entire game: rules, AI, and CLI
 That one script contains all logic and user interaction. No extra packages are required—just Python 3.8+.
 
-2 · How the code is organised inside roulette_duel.py
+2 How the code is organised inside roulette_duel.py
 Line range    Section	Key classes / functions	What it does
 1 – 110	      Config + Gun	USE_MC, MC_SAMPLES, class Gun	Toggles Monte-Carlo search; handgun model with fire(), eject(), clone(), and reload().
 120 – 210	    Player + Items	class Player, use_item()	Base player, life tracking, item effects (cigarettes, crystal, sand, whiskey).
