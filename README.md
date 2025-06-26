@@ -6,7 +6,7 @@ roulette_duel.py      ← the entire game: rules, AI, and CLI
 That one script contains all logic and user interaction. No extra packages are required—just Python 3.8+.
 
 # 2 How the code is organised inside roulette_duel.py
-Line range    Section	Key classes / functions	What it does \n
+Line range -  Section	Key classes / functions	What it does  
 1 – 110	      Config + Gun	USE_MC, MC_SAMPLES, class Gun	Toggles Monte-Carlo search; handgun model with fire(), eject(), clone(), and reload().  
 120 – 210	    Player + Items	class Player, use_item()	Base player, life tracking, item effects (cigarettes, crystal, sand, whiskey).  
 215 – 305	    Human interface	class HumanPlayer	Simple input / print prompts; crystal grants an extra decision loop.  
