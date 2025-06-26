@@ -7,13 +7,13 @@ That one script contains all logic and user interaction. No extra packages are r
 
 # 2 How the code is organised inside roulette_duel.py
 Line range    Section	Key classes / functions	What it does \n
-1 – 110	      Config + Gun	USE_MC, MC_SAMPLES, class Gun	Toggles Monte-Carlo search; handgun model with fire(), eject(), clone(), and reload().\n
-120 – 210	    Player + Items	class Player, use_item()	Base player, life tracking, item effects (cigarettes, crystal, sand, whiskey).\n
-215 – 305	    Human interface	class HumanPlayer	Simple input / print prompts; crystal grants an extra decision loop.\n
-310 – 460	    AI opponents	class AIPlayer	- mc_decide() → depth-1 Monte-Carlo expectiminimax\n
-                                            - execute() → carries out the chosen move\n
-                                            - simple_heuristic() fallback if USE_MC = False.\n
-465 – 565	    Game loop	class Game	Coin-flip for first move, turn handling, auto-reload, win detection.\n
+1 – 110	      Config + Gun	USE_MC, MC_SAMPLES, class Gun	Toggles Monte-Carlo search; handgun model with fire(), eject(), clone(), and reload().  
+120 – 210	    Player + Items	class Player, use_item()	Base player, life tracking, item effects (cigarettes, crystal, sand, whiskey).  
+215 – 305	    Human interface	class HumanPlayer	Simple input / print prompts; crystal grants an extra decision loop.  
+310 – 460	    AI opponents	class AIPlayer	- mc_decide() → depth-1 Monte-Carlo expectiminimax  
+                                            - execute() → carries out the chosen move  
+                                            - simple_heuristic() fallback if USE_MC = False.  
+465 – 565	    Game loop	class Game	Coin-flip for first move, turn handling, auto-reload, win detection.  
 569 – end	    Entrypoint	if __name__ == \"__main__\":	Seeds RNG and starts Game().play().
 
 # 3 Running the game
